@@ -68,7 +68,7 @@ router.get('/logout', (req, res) => {
 });
 
 
-// Presist user data after successful authentication
+// Persist user data after successful authentication
 passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
@@ -90,8 +90,5 @@ passport.deserializeUser(async (id, done) => {
     done(err, null);
   }
 });
-
-
-
 
 module.exports = router;
